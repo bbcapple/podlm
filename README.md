@@ -23,4 +23,3 @@ PodLM 是一个基于人工智能的播客生成平台，能够自动将文本�
 
 - 📧 Email: contact@podlm.com
 - 💬 微信公众号: PodLM_AI
-- Delete README.md
