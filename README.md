@@ -1,25 +1,92 @@
-# PodLM - AI播客生成器
+# AI Podcast Generator
 
-PodLM 是一个基于人工智能的播客生成平台，能够自动将文本转换为多人播客节目。
+An AI-powered podcast generation system that converts text into multi-voice audio content with dynamic configuration options.
 
-## 主要功能
+## Features
 
-- 🎙️ 多主持人支持
-- 🎵 自动背景音乐
-- 🤖 AI智能脚本生成
-- 🌐 中文语音合成
+- Text-to-speech conversion using Edge TTS
+- Multiple voice styles (male, female, child)
+- Multi-host configuration
+- Background music support
+- Content from text or URL
+- Real-time podcast generation
+- In-browser audio playback
 
-## 技术栈
+## Requirements
 
-- 前端：HTML + Tailwind CSS
-- AI：Groq API (Mixtral-8x7b-32768)
-- TTS：Edge TTS
+- Python 3.12+
+- FastAPI
+- Edge TTS
+- OpenAI API key
+- Other dependencies in requirements.txt
 
-## 快速开始
+## Installation
 
-访问我们的网站：[PodLM AI播客生成器](https://podlm.vercel.app)
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd ai_podcast_workflow
+```
 
-## 联系我们
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- 📧 Email: contact@podlm.com
-- 💬 微信公众号: PodLM_AI
+3. Create and configure .env file:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+HOST=127.0.0.1
+PORT=8000
+STATIC_DIR=./static
+AUDIO_DIR=./audio
+OUTPUT_DIR=./output
+TEMP_DIR=./temp
+DEBUG=True
+```
+
+4. Run the application:
+```bash
+python -m uvicorn main:app --reload
+```
+
+## API Endpoints
+
+- `GET /`: Web interface
+- `POST /create_podcast`: Generate podcast
+  - Request body:
+    ```json
+    {
+      "config": {
+        "hosts": [
+          {
+            "gender": "male|female|child"
+          }
+        ],
+        "background_music": true
+      },
+      "content": {
+        "text": "Your content here",
+        "url": "https://example.com"
+      }
+    }
+    ```
+
+## Project Structure
+
+```
+ai_podcast_workflow/
+├── main.py              # FastAPI application
+├── static/              # Static files
+│   ├── index.html      # Web interface
+│   ├── script.js       # Frontend logic
+│   └── styles.css      # Styling
+├── audio/              # Generated audio files
+├── output/             # Output directory
+├── temp/               # Temporary files
+└── requirements.txt    # Python dependencies
+```
+
+## License
+
+MIT License
