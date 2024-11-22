@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PodLM - AI播客生成器</title>
+    <!-- 使用字节跳动CDN，国内访问更快 -->
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-green-600">PodLM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto py-6 px-4">
+        <!-- 英雄区域 -->
+        <div class="text-center py-12 px-4 gradient-bg rounded-lg mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                AI播客生成器
+            </h1>
+            <p class="text-xl text-gray-700 mb-8">
+                只需一键，将文本转换为专业的多人播客节目
+            </p>
+            <a href="#try-now" class="btn-primary inline-block">
+                立即体验
+            </a>
+        </div>
+
+        <!-- 功能展示 -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-4">🎙️</div>
+                <h3 class="text-lg font-semibold mb-2">多主持人支持</h3>
+                <p class="text-gray-600">支持多个主持人，可选择不同性别和风格的声音</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-4">🎵</div>
+                <h3 class="text-lg font-semibold mb-2">背景音乐</h3>
+                <p class="text-gray-600">自动添加适合的背景音乐，提升播客质量</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                <div class="text-3xl mb-4">🤖</div>
+                <h3 class="text-lg font-semibold mb-2">AI脚本生成</h3>
+                <p class="text-gray-600">智能将文本转换为自然的对话脚本</p>
+            </div>
+        </div>
+
+        <!-- 使用步骤 -->
+        <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-6">使用步骤</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-3xl mb-4">📝</div>
+                    <h3 class="font-semibold mb-2">1. 输入内容</h3>
+                    <p class="text-gray-600">粘贴文章或输入文本</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl mb-4">👥</div>
+                    <h3 class="font-semibold mb-2">2. 选择主持人</h3>
+                    <p class="text-gray-600">配置主持人声音</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl mb-4">⚙️</div>
+                    <h3 class="font-semibold mb-2">3. 生成播客</h3>
+                    <p class="text-gray-600">AI自动处理</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl mb-4">🎧</div>
+                    <h3 class="font-semibold mb-2">4. 下载收听</h3>
+                    <p class="text-gray-600">获取播客文件</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 示例展示 -->
+        <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-6">播客示例</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2">科技新闻播报</h3>
+                    <audio controls class="w-full">
+                        <source src="#" type="audio/mpeg">
+                        您的浏览器不支持音频播放
+                    </audio>
+                </div>
+                <div class="border p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2">生活话题讨论</h3>
+                    <audio controls class="w-full">
+                        <source src="#" type="audio/mpeg">
+                        您的浏览器不支持音频播放
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="bg-white p-8 rounded-lg shadow-md" id="contact">
+            <h2 class="text-2xl font-bold mb-6">联系我们</h2>
+            <div class="space-y-4">
+                <p class="text-gray-600">
+                    如果您对我们的AI播客生成器感兴趣，或有任何问题和建议，欢迎通过以下方式联系我们：
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl">📧</span>
+                        <div>
+                            <h3 class="font-semibold">电子邮件</h3>
+                            <a href="mailto:contact@podlm.com" class="text-blue-600 hover:text-blue-800">contact@podlm.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl">💬</span>
+                        <div>
+                            <h3 class="font-semibold">微信公众号</h3>
+                            <p class="text-gray-600">PodLM_AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4">
+            <p class="text-center text-gray-400">
+                © 2024 PodLM AI播客生成器. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
